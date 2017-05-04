@@ -1,0 +1,20 @@
+.top-buffer {
+  margin-top: 1rem;
+}
+
+.bottom-buffer {
+  margin-top: 1rem;
+}
+
+.top-buffer-10 {
+  margin-top: 0.5rem;
+}
+
+.left-buffer {
+  margin-left: 20rem;
+}
+
+.center {
+  margin: 0 auto;
+  width: 80%;
+}

@@ -1,0 +1,52 @@
+.example-card {
+  width: 100%;
+}
+
+.example-header-image {
+  /*background-image: url("assets/img/examples/me.svg");*/
+  background-size: cover;
+}
+
+.title {
+  color: #45b29a;
+}
+
+.question {
+  color: #1e836c;
+}
+
+.top-buffer {
+  margin-top: 1rem;
+}
+
+.top-buffer-2x {
+  margin-top: 4rem;
+}
+
+.inner-center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.picStyle {
+  width: 120px;
+  height: 120px;
+}
+
+.bg-cover {
+  width: 140px;
+  height: 140px;
+  margin-top: 1rem;
+  background: url("../../assets/img/examples/me3.jpg") no-repeat center;
+  background-size: cover;
+  /*outline: 1px solid red;*/
+}
+
+.wholeButton {
+  width: 100%;
+  /*height: 40px;*/
+  color: #4b5257;
+  border: 0;
+  background-color: #45b29a;
+}
+
