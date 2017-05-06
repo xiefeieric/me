@@ -12,6 +12,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import "hammerjs";
 import {MaterialModule, MdButton} from "@angular/material";
 import {AngularFireModule} from "angularfire2";
+import { AboutMeComponent } from './about-me/about-me.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NotesComponent } from './notes/notes.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -28,7 +32,10 @@ export const firebaseConfig = {
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    AboutMeComponent,
+    PortfolioComponent,
+    NotesComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -36,6 +43,7 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule,
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
