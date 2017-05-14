@@ -1,7 +1,8 @@
-<div class="container">
+<header class="container" (window:resize)="onResize($event)">
   <div class="nav row top-buffer">
     <div class="col-md-12 top-buffer-10">
-      <ul class="nav justify-content-center">
+
+      <ul class="nav justify-content-end" *ngIf="!showSmallMenu">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME</a>
         </li>
@@ -15,6 +16,32 @@
           <a class="nav-link" routerLink="/notes" routerLinkActive="active">NOTES</a>
         </li>
       </ul>
+
+      <nav class="nav justify-content-end" *ngIf="showSmallMenu">
+        <button md-icon-button [mdMenuTriggerFor]="menu">
+          <md-icon>menu</md-icon>
+        </button>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item routerLink="/home">
+            <md-icon>home</md-icon>
+            <span>HOME</span>
+          </button>
+          <button md-menu-item routerLink="/about-me">
+            <md-icon>face</md-icon>
+            <span>ABOUT</span>
+          </button>
+          <button md-menu-item routerLink="/portfolio">
+            <md-icon>widgets</md-icon>
+            <span>PORTFOLIO</span>
+          </button>
+          <button md-menu-item routerLink="/notes">
+            <md-icon>event</md-icon>
+            <span>NOTES</span>
+          </button>
+        </md-menu>
+      </nav>
     </div>
   </div>
-</div>
+</header>
+
+

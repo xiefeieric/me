@@ -29,15 +29,15 @@
 }
 
 .picStyle {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 .bg-cover {
   width: 140px;
   height: 140px;
   margin-top: 1rem;
-  background: url("../../assets/img/examples/me3.jpg") no-repeat center;
+  background: url("../../assets/img/examples/me.jpg") no-repeat center;
   background-size: cover;
   /*outline: 1px solid red;*/
 }
@@ -49,4 +49,5 @@
   border: 0;
   background-color: #45b29a;
 }
+
 

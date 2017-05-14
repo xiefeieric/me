@@ -1,1 +1,5 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.card-style {
+  width: 100%;
+}

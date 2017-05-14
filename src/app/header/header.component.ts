@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from "@angular/core";
+import {ScreenSize} from "../enums.enum";
+import {Constants} from "../utils/constants";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  private showSmallMenu: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.showSmallMenu = window.innerWidth < ScreenSize.sm;
+  }
+
+  onResize(event) {
+    this.showSmallMenu = event.target.innerWidth < ScreenSize.sm;
   }
 
 }

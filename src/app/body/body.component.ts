@@ -1,33 +1,62 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {bounceOut, routerTransition, rubberBand} from "../utils/animations.util";
+import {TimerObservable} from "rxjs/observable/TimerObservable";
+import {Config, ExternalLink} from "../enums.enum";
+import {NavigateService} from "../services/navigate.service";
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  styleUrls: ['./body.component.css'],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class BodyComponent implements OnInit, OnDestroy {
 
-  constructor() {
+  constructor(private navigate: NavigateService) {
   }
 
   ngOnInit() {
-
   }
 
   ngOnDestroy() {
-
+    this.navigate.releaseAll();
   }
 
-  writeEmail() {
-    window.location.href = ("mailto:xiefeieric@gmail.com");
+  writeEmail(elem) {
+    try {
+      rubberBand(elem, 1);
+      this.navigate.navigate(ExternalLink.email);
+    } catch (e) {
+      this.navigate.navigate(ExternalLink.email);
+    }
   }
 
-  openLinkedin() {
-    window.open("https://www.linkedin.com/in/fei-xie-535958115/");
+  openLinkedin(elem) {
+    try {
+      rubberBand(elem, 1);
+      this.navigate.navigate(ExternalLink.linked);
+    } catch (e) {
+      this.navigate.navigate(ExternalLink.linked);
+    }
   }
 
-  openGithub() {
-    window.open("https://github.com/xiefeieric");
+  openGithub(elem) {
+    try {
+      rubberBand(elem, 1);
+      this.navigate.navigate(ExternalLink.github);
+    } catch (e) {
+      this.navigate.navigate(ExternalLink.github);
+    }
+  }
+
+  openBlog(elem) {
+    try {
+      rubberBand(elem, 1);
+      this.navigate.navigate(ExternalLink.blog);
+    } catch (e) {
+      this.navigate.navigate(ExternalLink.blog);
+    }
   }
 
 }

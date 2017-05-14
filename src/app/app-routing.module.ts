@@ -13,7 +13,8 @@ const appRoutes: Routes = [
   {path: 'home', component: BodyComponent},
   {path: 'portfolio', component: PortfolioComponent},
   {path: 'notes', component: NotesComponent},
-  {path: 'about-me', component: AboutMeComponent}
+  {path: 'about-me', component: AboutMeComponent},
+  {path: '**', component: BodyComponent}
 ];
 @NgModule({
   imports: [

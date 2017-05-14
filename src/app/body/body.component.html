@@ -52,21 +52,25 @@
         <!--<br/><br/><br/>-->
         <!--<a md-raised-button class="btn wholeButton" href="mailto:xiefeieric@gmail.com">Message Me</a>-->
         <div class="row top-buffer-2x">
-          <div class="col-sm-3" md-tooltip="My Blog" mdTooltipPosition="above">
-            <img src="../../assets/img/examples/blog.webp"
-                 class="embed-responsive rounded picStyle inner-center">
+          <div class="col-md-3">
+            <img src="../../assets/img/examples/blog.png"
+                 class="embed-responsive rounded-circle picStyle inner-center" md-tooltip="My Blog"
+                 mdTooltipPosition="above" #blog (click)="openBlog(blog)">
           </div>
-          <div class="col-sm-3" md-tooltip="My GitHub" mdTooltipPosition="above">
-            <img src="../../assets/img/examples/git.jpg" class="embed-responsive rounded picStyle inner-center"
-                 (click)="openGithub()">
+          <div class="col-md-3">
+            <img src="../../assets/img/examples/git.jpg" class="embed-responsive rounded-circle picStyle inner-center"
+                 md-tooltip="My GitHub" #github mdTooltipPosition="above"
+                 (click)="openGithub(github)">
           </div>
-          <div class="col-sm-3" md-tooltip="My LinkedIn" mdTooltipPosition="above">
-            <img src="../../assets/img/examples/in.jpg" class="embed-responsive rounded picStyle inner-center"
-                 (click)="openLinkedin()">
+          <div class="col-md-3">
+            <img src="../../assets/img/examples/in.jpg" class="embed-responsive rounded-circle picStyle inner-center"
+                 md-tooltip="My LinkedIn" #linkedin mdTooltipPosition="above"
+                 (click)="openLinkedin(linkedin)">
           </div>
-          <div class="col-sm-3" md-tooltip="Email Me" mdTooltipPosition="above">
+          <div class="col-md-3">
             <img src="../../assets/img/examples/email.jpg"
-                 class="embed-responsive rounded picStyle inner-center" (click)="writeEmail()">
+                 class="embed-responsive rounded-circle picStyle inner-center" md-tooltip="Email Me"
+                 mdTooltipPosition="above" #email (click)="writeEmail(email)">
           </div>
         </div>
       </md-card-content>
@@ -75,3 +79,6 @@
   </div>
   <div class="col-sm-1"></div>
 </div>
+
+<app-footer></app-footer>
+

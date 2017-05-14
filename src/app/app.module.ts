@@ -10,12 +10,14 @@ import {BodyComponent} from "./body/body.component";
 import {FooterComponent} from "./footer/footer.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import "hammerjs";
-import {MaterialModule, MdButton} from "@angular/material";
+import {MaterialModule} from "@angular/material";
 import {AngularFireModule} from "angularfire2";
-import { AboutMeComponent } from './about-me/about-me.component';
+import {AboutMeComponent} from "./about-me/about-me.component";
 import {AppRoutingModule} from "./app-routing.module";
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { NotesComponent } from './notes/notes.component';
+import {PortfolioComponent} from "./portfolio/portfolio.component";
+import {NotesComponent} from "./notes/notes.component";
+import {NavigateService} from "./services/navigate.service";
+import {RxhelperService} from "./services/rxhelper.service";
 
 // Must export the config
 export const firebaseConfig = {
@@ -47,7 +49,7 @@ export const firebaseConfig = {
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [NavigateService,RxhelperService],
   bootstrap: [AppComponent],
   exports: [MaterialModule]
 })

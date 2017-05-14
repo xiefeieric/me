@@ -9,7 +9,7 @@
 }
 
 .top-buffer {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 #proficiency {
@@ -22,10 +22,10 @@
   width: 100%;
 }
 
-#proficiency:hover {
-  background-image: linear-gradient(to right, red, yellow, green);
-  width: calc(65% - 2em);
-}
+/*#proficiency:hover {*/
+  /*background-image: linear-gradient(to right, red, yellow, green);*/
+  /*width: calc(65% - 2em);*/
+/*}*/
 
 #proficiency .proficiency-level {
   background-image: linear-gradient(rgba(127, 127, 127, .5), rgba(0, 0, 0, .5));

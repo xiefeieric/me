@@ -25,6 +25,7 @@
     "@angular/platform-server": "^4.1.0",
     "@angular/router": "^4.1.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.25",
+    "@types/node": "^6.0.73",
     "angularfire2": "^4.0.0-rc.0",
     "core-js": "^2.4.1",
     "firebase": "^3.9.0",
