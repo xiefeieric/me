@@ -18,6 +18,7 @@
   margin: 0 auto;
   width: 80%;
 }
+
 /*****************************************/
 #header-nav {
   position: fixed;
@@ -31,10 +32,12 @@
   -moz-box-shadow: 0 6px 15px 0 rgba(75, 75, 75, 0.31);
   box-shadow: 0 6px 15px 0 rgba(75, 75, 75, 0.31);
 }
+
 .links {
   text-decoration: none;
   color: rgba(249, 80, 80, 0.83);
 }
+
 .links:hover {
   color: #999;
   -webkit-transition: -webkit-transform 0.7s 0.3s ease;
@@ -42,6 +45,7 @@
   -ms-transition: -ms-transform 0.7s 0.3s ease;
   transition: 0.4s ease 0s;
 }
+
 a.menu-link {
   float: right;
   display: block;
@@ -49,6 +53,7 @@ a.menu-link {
   font-size: 3em;
   color: rgba(249, 80, 80, 0.83);
 }
+
 nav[role=navigation].active {
   clear: left;
   -webkit-transition: all 0.3s ease-out;
@@ -57,72 +62,88 @@ nav[role=navigation].active {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
 .js nav[role=navigation] {
   overflow: hidden;
   max-height: 0;
 }
+
 nav[role=navigation].active {
   max-height: 15em;
 }
+
 nav[role=navigation] ul {
   margin: 0;
   padding: 0;
   float: left;
   padding: 0.7em 0;
 }
+
 nav[role=navigation] li a {
   display: block;
   padding: 0.8em;
   font-size: 1.3em;
   bottom: 0;
 }
+
 .menu-link {
   height: 100%;
   width: 33px;
   cursor: pointer;
   margin-right: 5%;
 }
+
 .brand {
   float: left;
   margin-left: 1em;
   padding: 0.5em;
 }
+
 .nav-cont {
   max-width: 95%;
   margin: 0 auto;
 }
+
 section {
   margin-top: 4em;
   padding: 1em;
   color: #5c5c5c;
 }
+
 section hr {
   border-bottom: none;
   color: #f2f2f2;
 }
+
 .info {
   text-align: center;
 }
+
 @media screen and (min-width: 48.25em) {
   a.menu-link {
     display: none;
   }
+
   #menu {
     text-align: center;
   }
+
   .js nav[role=navigation] {
     max-height: none;
     text-align: center;
   }
+
   nav[role=navigation] ul {
     margin: 0 0 0 -0.25em;
     border: 0;
     float: right;
   }
+
   nav[role=navigation] li {
     display: inline-block;
     margin: 0 0.25em;
   }
+
   nav[role=navigation] li a {
     border: 0;
   }

@@ -12,6 +12,14 @@
   margin-top: 3rem;
 }
 
+.div-parent {
+  display: flex;
+}
+
+.div-child {
+  margin: auto;
+}
+
 #proficiency {
   background-image: linear-gradient(to right, rgba(255, 0, 0, .25), rgba(255, 255, 0, .25), rgba(0, 255, 0, .25));
   border-radius: .5em;
@@ -23,8 +31,8 @@
 }
 
 /*#proficiency:hover {*/
-  /*background-image: linear-gradient(to right, red, yellow, green);*/
-  /*width: calc(65% - 2em);*/
+/*background-image: linear-gradient(to right, red, yellow, green);*/
+/*width: calc(65% - 2em);*/
 /*}*/
 
 #proficiency .proficiency-level {

@@ -12,7 +12,7 @@ import {NavigateService} from "../services/navigate.service";
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor(private navigate:NavigateService) {
+  constructor(private navigate: NavigateService) {
   }
 
   ngOnInit() {
@@ -20,6 +20,10 @@ export class AboutMeComponent implements OnInit {
 
   linkToRoller() {
     window.open("https://rolleragency.co.uk/");
+  }
+
+  linkToShef() {
+    window.open("https://www.sheffield.ac.uk/");
   }
 
 }
