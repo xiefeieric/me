@@ -5,11 +5,6 @@ import {Constants} from "./constants";
  */
 
 export function routerTransition() {
-  // if (Constants.isLeft) {
-  //   return slideToLeft();
-  // } else {
-  //   return slideToRight();
-  // }
   return fadeInOut();
 }
 

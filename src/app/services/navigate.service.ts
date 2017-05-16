@@ -3,14 +3,12 @@ import {Config, ExternalLink} from "../enums.enum";
 import "rxjs/add/operator/pairwise";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
 import {RxhelperService} from "./rxhelper.service";
-import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
-import {Constants} from "../utils/constants";
-import {first} from "rxjs/operator/first";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class NavigateService {
 
-  constructor(private rxhelper: RxhelperService, private router: Router, private activeRouter: ActivatedRoute) {
+  constructor(private rxhelper: RxhelperService) {
   }
 
   navigate(link: ExternalLink) {

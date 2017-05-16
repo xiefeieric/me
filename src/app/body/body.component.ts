@@ -1,8 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
 import {bounceOut, routerTransition, rubberBand} from "../utils/animations.util";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
 import {Config, ExternalLink} from "../enums.enum";
 import {NavigateService} from "../services/navigate.service";
+import {NavigationEnd, Router} from "@angular/router";
+import {RxhelperService} from "../services/rxhelper.service";
 
 @Component({
   selector: 'app-body',
@@ -13,14 +15,21 @@ import {NavigateService} from "../services/navigate.service";
 })
 export class BodyComponent implements OnInit, OnDestroy {
 
-  constructor(private navigate: NavigateService) {
+  constructor(private navigate: NavigateService, private router: Router,
+              private renderer: Renderer2, private rxhelper: RxhelperService) {
   }
 
   ngOnInit() {
+    let subscription = this.router.events.filter(event => event instanceof NavigationEnd)
+      .subscribe(() => {
+        this.renderer.setProperty(document.body, 'scrollTop', 0);
+      });
+    this.rxhelper.add(subscription);
   }
 
   ngOnDestroy() {
     this.navigate.releaseAll();
+    this.rxhelper.releaseAll();
   }
 
   writeEmail(elem) {
