@@ -1,7 +1,6 @@
-import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
-import {bounceOut, routerTransition, rubberBand} from "../utils/animations.util";
-import {TimerObservable} from "rxjs/observable/TimerObservable";
-import {Config, ExternalLink} from "../enums.enum";
+import {Component, OnDestroy, OnInit, Renderer2} from "@angular/core";
+import {routerTransition, rubberBand} from "../utils/animations.util";
+import {ExternalLink} from "../enums.enum";
 import {NavigateService} from "../services/navigate.service";
 import {NavigationEnd, Router} from "@angular/router";
 import {RxhelperService} from "../services/rxhelper.service";

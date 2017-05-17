@@ -2,3 +2,9 @@
   margin: 0.5em;
   padding: 0.5em;
 }
+
+.particle-style {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

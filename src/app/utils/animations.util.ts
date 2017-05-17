@@ -1,5 +1,4 @@
-import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
-import {Constants} from "./constants";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 /**
  * Created by Fei on 13/05/2017.
  */

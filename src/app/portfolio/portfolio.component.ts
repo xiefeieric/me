@@ -3,6 +3,7 @@ import {routerTransition} from "../utils/animations.util";
 import {RxhelperService} from "../services/rxhelper.service";
 import {NavigationEnd, Router} from "@angular/router";
 import {ScreenSize} from "../enums.enum";
+declare var particlesJS:any;
 
 @Component({
   selector: 'app-portfolio',
@@ -19,7 +20,20 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+
     this.scrollTop();
+    if (window.innerWidth < ScreenSize.xs) {
+      this.cols = 1;
+    } else if (window.innerWidth > ScreenSize.xs && window.innerWidth < ScreenSize.md) {
+      this.cols = 2;
+    } else {
+      this.cols = 3;
+    }
   }
 
   private scrollTop() {
