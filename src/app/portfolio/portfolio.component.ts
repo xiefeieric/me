@@ -3,7 +3,7 @@ import {routerTransition} from "../utils/animations.util";
 import {RxhelperService} from "../services/rxhelper.service";
 import {NavigationEnd, Router} from "@angular/router";
 import {ScreenSize} from "../enums.enum";
-declare var particlesJS:any;
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-portfolio',
@@ -15,6 +15,7 @@ declare var particlesJS:any;
 export class PortfolioComponent implements OnInit, OnDestroy {
 
   private cols: number = 3;
+  private showParticles: boolean = true;
 
   constructor(private router: Router, private renderer: Renderer2, private rxhelper: RxhelperService) {
   }
@@ -22,17 +23,20 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
       console.log('callback - particles.js config loaded');
     });
 
     this.scrollTop();
     if (window.innerWidth < ScreenSize.xs) {
       this.cols = 1;
+      this.showParticles = false;
     } else if (window.innerWidth > ScreenSize.xs && window.innerWidth < ScreenSize.md) {
       this.cols = 2;
+      this.showParticles = true;
     } else {
       this.cols = 3;
+      this.showParticles = true;
     }
   }
 

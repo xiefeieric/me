@@ -7,45 +7,45 @@ export function routerTransition() {
   return fadeInOut();
 }
 
-function slideToLeft() {
-  return trigger('routerTransition', [
-    state('void', style({position: 'absolute', width: '100%'})),
-    state('*', style({position: 'absolute', width: '100%'})),
-    transition(':enter', [  // before 2.1: transition('void => *', [
-      style({transform: 'translateX(100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-    ]),
-    transition(':leave', [  // before 2.1: transition('* => void', [
-      style({transform: 'translateX(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(-100%)'}))
-    ])
-  ]);
-}
+// function slideToLeft() {
+//   return trigger('routerTransition', [
+//     state('void', style({position: 'absolute', width: '100%'})),
+//     state('*', style({position: 'absolute', width: '100%'})),
+//     transition(':enter', [  // before 2.1: transition('void => *', [
+//       style({transform: 'translateX(100%)'}),
+//       animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
+//     ]),
+//     transition(':leave', [  // before 2.1: transition('* => void', [
+//       style({transform: 'translateX(0%)'}),
+//       animate('0.5s ease-in-out', style({transform: 'translateX(-100%)'}))
+//     ])
+//   ]);
+// }
 
-function slideToRight() {
-  return trigger('routerTransition', [
-    state('void', style({position: 'absolute', width: '100%'})),
-    state('*', style({position: 'absolute', width: '100%'})),
-    transition(':enter', [
-      style({transform: 'translateX(-100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateX(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(100%)'}))
-    ])
-  ]);
-}
+// function slideToRight() {
+//   return trigger('routerTransition', [
+//     state('void', style({position: 'absolute', width: '100%'})),
+//     state('*', style({position: 'absolute', width: '100%'})),
+//     transition(':enter', [
+//       style({transform: 'translateX(-100%)'}),
+//       animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
+//     ]),
+//     transition(':leave', [
+//       style({transform: 'translateX(0%)'}),
+//       animate('0.5s ease-in-out', style({transform: 'translateX(100%)'}))
+//     ])
+//   ]);
+// }
 
-function fadeIn(elem, iterations) {
-  var keyframes = [
-    {opacity: '0', offset: 0},
-    {opacity: '1', offset: 1}];
-  var timing = {duration: 900, iterations: iterations};
-  return elem.animate(keyframes, timing);
-}
+// function fadeIn(elem, iterations) {
+//   var keyframes = [
+//     {opacity: '0', offset: 0},
+//     {opacity: '1', offset: 1}];
+//   var timing = {duration: 900, iterations: iterations};
+//   return elem.animate(keyframes, timing);
+// }
 
-function fadeInOut() {
+export function fadeInOut() {
   return trigger('routerTransition', [
     state('void', style({position: 'absolute', width: '100%'})),
     state('*', style({position: 'absolute', width: '100%'})),
@@ -61,28 +61,28 @@ function fadeInOut() {
 }
 
 
-export function bounceIn(elem, iterations) {
-  var keyframes = [
-    {transform: 'scale3d(.3, .3, .3)', opacity: '0', offset: 0},
-    {transform: 'scale3d(1.1, 1.1, 1.1)', offset: 0.2},
-    {transform: 'scale3d(.9, .9, .9)', offset: 0.4},
-    {transform: 'scale3d(1.03, 1.03, 1.03)', opacity: '1', offset: 0.6},
-    {transform: 'scale3d(.97, .97, .97)', offset: 0.8},
-    {transform: 'scale3d(1, 1, 1)', opacity: '1', offset: 1}];
-  var timing = {duration: 900, iterations: iterations, easing: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)'};
-  return elem.animate(keyframes, timing);
-}
+// export function bounceIn(elem, iterations) {
+//   var keyframes = [
+//     {transform: 'scale3d(.3, .3, .3)', opacity: '0', offset: 0},
+//     {transform: 'scale3d(1.1, 1.1, 1.1)', offset: 0.2},
+//     {transform: 'scale3d(.9, .9, .9)', offset: 0.4},
+//     {transform: 'scale3d(1.03, 1.03, 1.03)', opacity: '1', offset: 0.6},
+//     {transform: 'scale3d(.97, .97, .97)', offset: 0.8},
+//     {transform: 'scale3d(1, 1, 1)', opacity: '1', offset: 1}];
+//   var timing = {duration: 900, iterations: iterations, easing: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)'};
+//   return elem.animate(keyframes, timing);
+// }
 
-export function bounceOut(elem, iterations) {
-  var keyframes = [
-    {transform: 'none', opacity: '1', offset: 0},
-    {transform: 'scale3d(.9, .9, .9)', opacity: '1', offset: 0.2},
-    {transform: 'scale3d(1.1, 1.1, 1.1)', opacity: '1', offset: 0.5},
-    {transform: 'scale3d(1.1, 1.1, 1.1)', opacity: '1', offset: 0.55},
-    {transform: 'scale3d(.3, .3, .3)', opacity: '0', offset: 1}];
-  var timing = {duration: 900, iterations: iterations};
-  return elem.animate(keyframes, timing);
-}
+// export function bounceOut(elem, iterations) {
+//   var keyframes = [
+//     {transform: 'none', opacity: '1', offset: 0},
+//     {transform: 'scale3d(.9, .9, .9)', opacity: '1', offset: 0.2},
+//     {transform: 'scale3d(1.1, 1.1, 1.1)', opacity: '1', offset: 0.5},
+//     {transform: 'scale3d(1.1, 1.1, 1.1)', opacity: '1', offset: 0.55},
+//     {transform: 'scale3d(.3, .3, .3)', opacity: '0', offset: 1}];
+//   var timing = {duration: 900, iterations: iterations};
+//   return elem.animate(keyframes, timing);
+// }
 
 export function rubberBand(elem, iterations) {
   var keyframes = [

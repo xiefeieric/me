@@ -1,4 +1,4 @@
-<div id="particles-js" class="particle-style"></div>
+<div *ngIf="showParticles" id="particles-js" class="particle-style"></div>
 <div class="row" (window:resize)="onResize($event)">
   <div class="col-sm-1"></div>
   <div class="col-sm-10">
@@ -19,12 +19,11 @@
         <md-grid-list cols="{{cols}}" rowHeight="1:1" gutterSize="2em">
           <md-grid-tile>
             <md-card>
-              <img md-card-image src="../../assets/img/examples/roller.png">
+              <img md-card-image src="../../assets/img/project/project-me.png">
               <md-card-content>
+                <h6>FEIXIE.ME</h6>
                 <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
+                  This is my personal website, build with Angular4, Bootstrp4, Angular Material and Firebase.
                 </p>
               </md-card-content>
             </md-card>
@@ -32,12 +31,12 @@
 
           <md-grid-tile>
             <md-card>
-              <img md-card-image src="../../assets/img/examples/roller.png">
+              <img md-card-image src="../../assets/img/project/project-weather.png">
               <md-card-content>
+                <h6>Cool Weather</h6>
                 <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
+                  A weather app, auto detect your location and show weather forecast around your.
+                  <a href="https://play.google.com/store/apps/details?id=uk.me.feixie.coolweather" target="_blank">Download</a>
                 </p>
               </md-card-content>
             </md-card>
@@ -45,12 +44,12 @@
 
           <md-grid-tile>
             <md-card>
-              <img md-card-image src="../../assets/img/examples/roller.png">
+              <img md-card-image src="../../assets/img/project/project-near.png">
               <md-card-content>
+                <h6>Nearby</h6>
                 <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
+                  A location-based app, which will show most popular restaurant around you.
+                  <a href="https://play.google.com/store/apps/details?id=uk.me.feixie.testnearby" target="_blank">Download</a>
                 </p>
               </md-card-content>
             </md-card>
@@ -58,12 +57,40 @@
 
           <md-grid-tile>
             <md-card>
-              <img md-card-image src="../../assets/img/examples/roller.png">
+              <img md-card-image src="../../assets/img/project/project-shopping.png">
               <md-card-content>
+                <h6>Shopping List</h6>
                 <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
+                  A shopping list app with reminder, which can help shopping easier for you.
+                  <a href="https://play.google.com/store/apps/details?id=uk.me.feixie.shoppinglist" target="_blank">Download</a>
+                </p>
+              </md-card-content>
+            </md-card>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <md-card>
+              <img md-card-image src="../../assets/img/project/project-note.png">
+              <md-card-content>
+                <h6>Note</h6>
+                <p>
+                  A note taking app which can take text, voice, photo and video, help note taking smooth.
+                  <a href="https://play.google.com/store/apps/details?id=uk.co.feixie.mynote"
+                     target="_blank">Download</a>
+                </p>
+              </md-card-content>
+            </md-card>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <md-card>
+              <img md-card-image src="../../assets/img/project/project-player.png">
+              <md-card-content>
+                <h6>XFPlayer</h6>
+                <p>
+                  A full format support media player which has live channel and server side stream.
+                  <a href="http://www.feixie.me.uk/xfplayer/app-release.apk"
+                     target="_blank">Download</a>
                 </p>
               </md-card-content>
             </md-card>
